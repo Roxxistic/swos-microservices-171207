@@ -1,0 +1,20 @@
+registry:
+  build: ./registry-service
+  ports:
+    - "1111:1111"
+person:
+  build: ./person-service
+  links:
+    - registry:registry
+address:
+  build: ./address-service
+  links:
+    - registry:registry
+frontend:
+  build: ./frontend-service
+  links:
+    - registry:registry
+    - person:person-service
+    - address:address-service
+  ports:
+    - "8080:8080"
