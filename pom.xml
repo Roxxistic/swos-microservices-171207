@@ -11,8 +11,10 @@
 	<modules>
         <module>person-service</module>
         <module>address-service</module>
+		<module>person-address-service</module>
         <module>registry-service</module>
         <module>frontend-service</module>
+		<module>monitor-service</module>
     </modules>
 
 </project>
